@@ -1,7 +1,7 @@
 ActsAsUID
 ======================
 
-A plugin for generates unique UID for ActiveRecord model.
+A plugin for generate unique UID for ActiveRecord model.
 
 Installation
 ------------
