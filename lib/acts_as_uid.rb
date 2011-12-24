@@ -13,7 +13,9 @@ module ActiveRecord::Acts::ActsAsUid
 	
   module ClassMethods
 	
-    def acts_as_uid(&block)			
+    def acts_as_uid(&block)	
+			include ActiveRecord::Acts::ActsAsUid::InstanceMethods
+			
 			yield self if block_given?
 			
 			if respond_to?(:attributes_protected_by_default)
@@ -31,8 +33,6 @@ module ActiveRecord::Acts::ActsAsUid
 				
 				true
 			end
-			
-			include ActiveRecord::Acts::ActsAsUid::InstanceMethods
 
 			def self.find_by_uid!(args)
 				args = args.to_s.split('-')[0]
