@@ -18,12 +18,8 @@ module ActiveRecord::Acts::ActsAsUid
 			
 			yield self if block_given?
 			
-			if respond_to?(:attributes_protected_by_default, true)
-				def self.attributes_protected_by_default
-						super + ['uid']
-				end
-			end			
-			
+			attr_protected :uid
+						
 			before_validation(:on => :create) do
 				
 				self.uid = (0...(self.acts_as_uid_size)).map{ self.acts_as_uid_charset.to_a[rand(self.acts_as_uid_charset.size)] }.join
