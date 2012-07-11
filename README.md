@@ -55,5 +55,3 @@ If you want replace the default find method in a model:
 			self.find_by_uid!(*args)
 		end
 	end	
-
-`uid` field is in `attributes_protected_by_default` for counteract mass-assignment.
