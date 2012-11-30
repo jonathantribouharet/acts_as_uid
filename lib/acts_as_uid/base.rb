@@ -40,7 +40,7 @@ module ActiveRecord::Acts::ActsAsUid
 				super(args)
 			end			
 			
-    end    
+    	end    
 
 	end	
 

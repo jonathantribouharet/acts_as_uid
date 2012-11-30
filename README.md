@@ -1,7 +1,7 @@
 ActsAsUID
 ======================
 
-A plugin for generate UID for ActiveRecord model. Usefull for obfuscate.
+A plugin for generate UID for ActiveRecord model. Usefull for generate token or hide number of elements in your database.
 
 Installation
 ------------
@@ -44,7 +44,7 @@ Custom configuration in your model:
 * `acts_as_uid_size` is the size of UID field, by default it's `15`.
 * `acts_as_uid_charset` is the charset of UID field, by default it's `%w{ 0 1 2 3 4 5 6 7 8 9 }`.
 
-Use dynamic method `Model.find_by_uid!("012345")` for find a record and raise `ActiveRecord::RecordNotFound` if the record is not found or `Model.find_by_uid("012345")` for return nil if the record is not found.
+Use dynamic method `User.find_by_uid!("012345")` for find a record and raise `ActiveRecord::RecordNotFound` if the record is not found or `User.find_by_uid("012345")` for return nil if the record is not found.
 
 If you want replace the default find method in a model:
 
